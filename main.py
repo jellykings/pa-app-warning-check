@@ -3,6 +3,9 @@ import base64
 import getpass
 import xml.etree.ElementTree as ET
 import argparse
+import urllib3
+
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 def get_credentials():
     firewall_ip = input("Enter the firewall IP: ")
